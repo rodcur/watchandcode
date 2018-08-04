@@ -4,7 +4,7 @@ var todoList = {
     console.log("My todo list: " + this.todos);
   },
   newTodo: function(todo) {
-    todoList.todos.push(todo);
+    this.todos.push(todo);
     this.showTodos();
   },
   changeTodo: function(position, newValue) {
@@ -13,6 +13,6 @@ var todoList = {
   },
   deleteTodo: function(position) {
     this.todos.splice(position, 1);
-    showTodos();
+    this.showTodos();
   }
 };
