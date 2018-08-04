@@ -1,18 +1,18 @@
-let todos = ["item1", "item2", "item3"]; // create todo list
-
-function showTodos() {
-  console.log("My todo list: " + todos); // print out todolist
-}
-
-function addNewTodo(todo) {          // adds a new item to the list
-  todos.push(todo);
-  showTodos();                      // then prints the list out
-}
-function changeTodo(position, newValue) { // adds two parameters for postion and value
-  todos[position] = newValue;             //changes the value
-  showTodos();
-}
-function deleteTodo (position) {
-  todos.splice(position, 1,);
-  showTodos();
-}
+var todoList = {
+  todos: ["item1", "item2", "item3"],
+  showTodos: function() {
+    console.log("My todo list: " + this.todos);
+  },
+  newTodo: function(todo) {
+    todoList.todos.push(todo);
+    this.showTodos();
+  },
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.showTodos();
+  },
+  deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    showTodos();
+  }
+};
