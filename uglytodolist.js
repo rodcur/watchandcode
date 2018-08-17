@@ -4,8 +4,14 @@ const todoList = {
     console.log('My Todos:');
     for (var i = 0; i < this.todos.length; i++) {
     console.log(this.todos[i].todoText);
+    if (this.todos[i].completed === false) {
+     console.log('Incomplete');
+   } else {
+     console.log('Complete!'); }
     }
+
   },
+
   addTodo: function(todoText) {
     this.todos.push({
       todoText: todoText,
@@ -26,4 +32,4 @@ const todoList = {
     todo.completed = !todo.completed;
     this.displayTodos();
   }
-};  
+};
